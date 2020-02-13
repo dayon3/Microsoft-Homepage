@@ -61,6 +61,8 @@ ul {
 
 .main-nav ul {
 	display: flex;
+	align-items: center;
+	padding-top: 8px;
 }
 
 .main-nav ul li {
@@ -78,7 +80,6 @@ ul {
 .main-nav ul.main-menu {
 	flex: 1;
 	margin-left: 2rem;
-	margin-top: 6px;
 }
 
 .main-nav ul.right-menu a:hover {
@@ -94,6 +95,20 @@ ul {
 .heading {
 	font-size: 2.4rem;
 	line-height: 2.8rem;
+}
+
+.menu-btn {
+	cursor: pointer;
+	position: absolute;
+	top: 1.2rem;
+	right: 3.5rem;
+	z-index: 2;
+	display: none;
+}
+
+.menu-btn > * {
+	height: 3.2rem;
+	width: 3.2rem;
 }
 
 .btn {
@@ -191,7 +206,7 @@ ul {
 
 .windows .content {
 	width: 40%;
-	padding: 0 0 0 10rem;
+	padding-left: 10rem;
 	align-self: center;
 }
 
@@ -213,7 +228,7 @@ ul {
 
 .scholarship .content {
 	width: 55%;
-	padding: 8rem 8rem;
+	padding: 8rem;
 }
 
 /* Social Media */
@@ -308,3 +323,113 @@ ul {
 }
 
 /* Media Queries */
+@media (max-width: 1024px) {
+	.footer .footer-inner {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
+@media (max-width: 768px) {
+	.menu-btn {
+		display: block;
+	}
+
+	.menu-btn:hover {
+		opacity: 0.5;
+	}
+
+	.main-nav ul.main-menu {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: #f2f2f2;
+		opacity: 0.9;
+		width: 50%;
+		height: 100%;
+		padding: 3rem;
+		border-right: 1px solid #ccc;
+		transform: translateX(-50rem);
+		transition: transform 0.5s ease-in-out;
+	}
+
+	.main-nav ul.main-menu li {
+		padding: 1rem;
+		border-bottom: 1px solid #ccc;
+		font-size: 1.4rem;
+	}
+
+	.main-nav ul.main-menu li:last-child {
+		border-bottom: 0;
+	}
+
+	.main-nav ul.main-menu.show {
+		transform: translateX(-2rem);
+	}
+
+	.main-nav ul.right-menu {
+		margin-right: 5rem;
+	}
+
+	.home-cards {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.windows .content {
+		padding-left: 4rem;
+		width: 60%;
+	}
+
+	.windows .content h2 {
+		margin-bottom: 2rem;
+	}
+
+	.scholarship {
+		display: flex;
+		align-items: center;
+	}
+
+	.scholarship .content {
+		width: 85%;
+		padding: 4rem;
+	}
+
+	.links .links-inner {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.footer li {
+		margin-right: 1.5rem;
+		margin-bottom: 1rem;
+	}
+}
+
+@media (max-width: 640px) {
+	.home-cards {
+		grid-template-columns: 1fr;
+	}
+
+	.windows .content p {
+		display: none;
+	}
+
+	.scholarship {
+		align-items: flex-end;
+		padding-bottom: 5rem;
+	}
+
+	.links .links-inner {
+		grid-template-columns: 1fr;
+	}
+
+	.links .links-inner ul {
+		margin-bottom: 2rem;
+	}
+}
+
+@media (max-width: 414px) {
+  .windows .content {
+    width: 70%;
+  }
+}

@@ -7,6 +7,10 @@
 		<title>Microsoft - Official Home Page</title>
 	</head>
 	<body>
+		<div class="menu-btn">
+			<i data-feather="menu"></i>
+		</div>
+
 		<div class="container">
 			<!-- Nav -->
 			<nav class="main-nav">
@@ -30,6 +34,11 @@
 					<li>
 						<a href="#">
 							<i data-feather="shopping-cart"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i data-feather="user-plus"></i>
 						</a>
 					</li>
 				</ul>
@@ -268,6 +277,11 @@
 		<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 		<script>
 			feather.replace();
+		</script>
+		<script>
+			document.querySelector('.menu-btn').addEventListener('click', () => {
+				document.querySelector('.main-menu').classList.toggle('show');
+			});
 		</script>
 	</body>
 </html>
