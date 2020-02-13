@@ -378,7 +378,7 @@ ul {
 
 	.windows .content {
 		padding-left: 4rem;
-		width: 65%;
+		width: 70%;
 	}
 
 	.windows .content h2 {
@@ -408,11 +408,16 @@ ul {
 @media (max-width: 640px) {
 	.home-cards {
 		grid-template-columns: 1fr;
+  }
+  
+  .windows .content {
+		width: 75%;
 	}
 
 	.windows .content p {
 		display: none;
-	}
+  }
+  
 
 	.scholarship {
 		align-items: flex-end;
